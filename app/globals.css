@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #ffffff;
+  color: #050505;
+  font-family: var(--font-body);
+  text-rendering: geometricPrecision;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::selection {
+  background: #050505;
+  color: #ffffff;
+}
+
+.range-input {
+  appearance: none;
+  width: 100%;
+  height: 0.625rem;
+  border-radius: 999px;
+  background:
+    linear-gradient(#050505, #050505) 0 / var(--range-progress, 50%) 100% no-repeat,
+    #e4e4e7;
+  outline: none;
+  transition: background-size 180ms ease;
+}
+
+.range-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+  background: #050505;
+  box-shadow: 0 4px 14px rgba(5, 5, 5, 0.22);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.range-input::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(5, 5, 5, 0.28);
+}
+
+.range-input::-moz-range-thumb {
+  width: 1.35rem;
+  height: 1.35rem;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+  background: #050505;
+  box-shadow: 0 4px 14px rgba(5, 5, 5, 0.22);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.range-input::-moz-range-thumb:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(5, 5, 5, 0.28);
+}
