@@ -407,22 +407,22 @@ export default function Home() {
       </header>
 
       <section className="border-b border-line bg-white">
-        <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
-          <div className="w-full max-w-4xl">
+        <div className="mx-auto flex min-h-[70vh] max-w-7xl items-center justify-center px-5 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
+          <div className="mx-auto w-full max-w-4xl">
             <p className="mb-5 inline-flex rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-extrabold uppercase tracking-[0.14em] text-zinc-700">
               Automation risk calculator
             </p>
             <h1 className="font-heading text-5xl font-bold leading-[1.02] tracking-normal text-ink sm:text-6xl lg:text-7xl">
               Check how future-proof your work is.
             </h1>
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-muted">
+            <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-muted">
               Enter any job, business, or task and get an instant automation risk
               score using a simple rule-based calculator.
             </p>
 
             <form
               onSubmit={calculateReport}
-              className="mt-9 w-full max-w-4xl border border-zinc-300 bg-white p-2 shadow-card sm:flex sm:items-center sm:gap-2"
+              className="mx-auto mt-9 w-full max-w-4xl border border-zinc-300 bg-white p-2 text-left shadow-card sm:flex sm:items-center sm:gap-2"
             >
               <label className="sr-only" htmlFor="role-name">
                 Job, business, or task name
@@ -449,12 +449,12 @@ export default function Home() {
               </button>
             </form>
             {inputError && (
-              <p id="role-name-error" className="mt-3 text-sm font-bold text-zinc-700">
+              <p id="role-name-error" className="mt-3 text-center text-sm font-bold text-zinc-700">
                 {inputError}
               </p>
             )}
 
-            <div className="mt-5 flex w-full max-w-4xl flex-wrap gap-2">
+            <div className="mx-auto mt-5 flex w-full max-w-4xl flex-wrap justify-center gap-2">
               {exampleRoles.map((role) => (
                 <button
                   key={role}
